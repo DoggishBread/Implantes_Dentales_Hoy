@@ -1,4 +1,2 @@
-Flask
-gunicorn
-pymongo
-flask-cors
+gunicorn==23.0.0
+packaging==25.0
