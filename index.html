@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Implantes Dentales Hoy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Implantes Dentales Hoy</h1>
+    <p>Información confiable de profesionales para tu salud dental</p>
+  </header>
+
+  <section id="nuevo-articulo">
+    <h2>Publicar nuevo artículo</h2>
+    <form id="formulario" novalidate>
+      <input type="text" id="autor" placeholder="Nombre del autor">
+      <span class="error" id="error-autor"></span>
+
+      <select id="categoria">
+        <option value="" disabled selected>Selecciona una categoría</option>
+        <option value="Información general">Información general</option>
+        <option value="Cuidados">Cuidados</option>
+        <option value="Promoción de servicios">Promoción de servicios</option>
+        <option value="Casos de éxito">Casos de éxito</option>
+        <option value="Consejos">Consejos</option>
+      </select>
+      <span class="error" id="error-categoria"></span>
+
+      <input type="text" id="titulo" placeholder="Título del artículo">
+      <span class="error" id="error-titulo"></span>
+
+      <textarea id="contenido" placeholder="Contenido del artículo"></textarea>
+      <span class="error" id="error-contenido"></span>
+
+      <input type="text" id="imagen" placeholder="URL de imagen (opcional)">
+      <button type="submit">Publicar</button>
+    </form>
+  </section>
+
+  <section id="busqueda">
+    <input type="text" id="buscador" placeholder="🔍 Buscar por título...">
+  </section>
+
+  <section id="filtros-categorias">
+    <button data-cat="" data-emoji="🦷" onclick="filtrarPorCategoria('')">🦷 Todos (0)</button>
+    <button data-cat="Información general" data-emoji="📘" onclick="filtrarPorCategoria('Información general')">📘 Información general (0)</button>
+    <button data-cat="Cuidados" data-emoji="💉" onclick="filtrarPorCategoria('Cuidados')">💉 Cuidados (0)</button>
+    <button data-cat="Promoción de servicios" data-emoji="🛠" onclick="filtrarPorCategoria('Promoción de servicios')">🛠 Promoción de servicios (0)</button>
+    <button data-cat="Casos de éxito" data-emoji="🏆" onclick="filtrarPorCategoria('Casos de éxito')">🏆 Casos de éxito (0)</button>
+    <button data-cat="Consejos" data-emoji="💡" onclick="filtrarPorCategoria('Consejos')">💡 Consejos (0)</button>
+  </section>
+
+  <section id="articulos">
+    <h2>Artículos Recientes</h2>
+    <div id="articulos-container"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Implantes Dentales Hoy. Desarrollado por Ramsés Calderón 🦷</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

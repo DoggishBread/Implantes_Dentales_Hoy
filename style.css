@@ -1,0 +1,200 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #00aaff;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+h1, h2, h3, h4 {
+  margin: 0.5rem 0;
+}
+
+section {
+  padding: 2rem;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+#formulario input,
+#formulario textarea,
+#formulario select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#formulario button {
+  background-color: #00aaff;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.error {
+  color: #ff3333;
+  font-size: 0.85rem;
+  display: block;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#busqueda {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#buscador {
+  padding: 0.75rem;
+  width: 90%;
+  max-width: 400px;
+  font-size: 1rem;
+  border: 2px solid #00aaff;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 6px rgba(0, 170, 255, 0.2);
+}
+
+#buscador:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 8px rgba(0, 119, 204, 0.4);
+}
+
+#filtros-categorias {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+#filtros-categorias button {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#filtros-categorias button:hover {
+  background-color: #00aaff;
+  color: white;
+}
+
+.post {
+  background-color: #f0f8ff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.imagen-articulo {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.acciones, .likes {
+  margin-top: 0.75rem;
+}
+
+.acciones button,
+.likes button {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.acciones button:hover,
+.likes button:hover {
+  background-color: #0077cc;
+  color: white;
+}
+
+.comentarios {
+  margin-top: 1rem;
+  background-color: #eef;
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+
+.comentarios h4 {
+  margin-bottom: 0.5rem;
+}
+
+.comentarios ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.comentarios li {
+  margin: 0.3rem 0;
+}
+
+.comentarios input[type="text"] {
+  display: block;
+  margin: 0.3rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.comentarios button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+.likes {
+  margin-top: 0.5rem;
+}
+
+.likes button {
+  background-color: #eee;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.likes button:hover {
+  background-color: #ddd;
+}
