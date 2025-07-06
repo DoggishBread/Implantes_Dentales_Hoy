@@ -42,8 +42,8 @@ formulario.addEventListener("submit", async (e) => {
   if (errores) return;
 
   const url    = articuloEditandoId
-    ? `http://127.0.0.1:5000/articulos/${articuloEditandoId}`
-    : "http://127.0.0.1:5000/publicar";
+    ? `https://implantes-dentales-hoy.onrender.com/articulos/${articuloEditandoId}`
+    : "https://implantes-dentales-hoy.onrender.com/publicar";
   const method = articuloEditandoId ? "PUT" : "POST";
 
   const res  = await fetch(url, {
@@ -121,10 +121,10 @@ function renderArticulo(a) {
 async function cargarArticulos(filtroCategoria = "", filtroBusqueda = "") {
   categoriaActiva = filtroCategoria;
 
-  const res      = await fetch("http://127.0.0.1:5000/articulos");
+  const res      = await fetch("https://implantes-dentales-hoy.onrender.com/articulos");
   const articulos = await res.json();
 
-  const conteosRes = await fetch("http://127.0.0.1:5000/categorias-contador");
+  const conteosRes = await fetch("https://implantes-dentales-hoy.onrender.com/categorias-contador");
   const conteos    = await conteosRes.json();
 
   articulosDiv.innerHTML = "";
@@ -160,14 +160,14 @@ function editarArticulo(id, titulo, contenido, categoria, autor, imagen) {
 
 async function eliminarArticulo(id) {
   if (!confirm("¿Estás segur@ de que quieres borrar este artículo?")) return;
-  const res  = await fetch(`http://127.0.0.1:5000/articulos/${id}`, { method: "DELETE" });
+  const res  = await fetch(`https://implantes-dentales-hoy.onrender.com/articulos/${id}`, { method: "DELETE" });
   const data = await res.json();
   alert(data.mensaje || data.error);
   cargarArticulos(categoriaActiva);
 }
 
 async function darLike(id, btn) {
-  const res  = await fetch(`http://127.0.0.1:5000/articulos/${id}/like`, { method: "POST" });
+  const res  = await fetch(`https://implantes-dentales-hoy.onrender.com/articulos/${id}/like`, { method: "POST" });
   const data = await res.json();
   if (data.likes !== undefined) {
     btn.textContent = `👍 ${data.likes}`;
@@ -175,7 +175,7 @@ async function darLike(id, btn) {
 }
 
 async function darDislike(id, btn) {
-  const res  = await fetch(`http://127.0.0.1:5000/articulos/${id}/dislike`, { method: "POST" });
+  const res  = await fetch(`https://implantes-dentales-hoy.onrender.com/articulos/${id}/dislike`, { method: "POST" });
   const data = await res.json();
   if (data.dislikes !== undefined) {
     btn.textContent = `👎 ${data.dislikes}`;
